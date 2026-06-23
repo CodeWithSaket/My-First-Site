@@ -36,6 +36,58 @@
     background-color: #0056b3;
     transform: scale(1.05); 
 }
+/* Form Container Styling */
+.form-container {
+    background-color: white;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Halka shadow effect */
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Form Group (Label + Input) */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
 </style>
 </head>
 <body>
@@ -44,6 +96,22 @@
     <a href="https://www.instagram.com/" target="_blank">Instagram opan karne ke liye yahan click karein</a>
 
     <img src="https://picsum.photos/300/200" alt="Ek  photo">" alt="Ek  photo">
+    <div class="form-container">
+    <h2>(Contact Us)</h2>
+    <form>
+        <div class="form-group">
+            <label for="name"> Naam:</label>
+            <input type="text" id="name" placeholder="Apna naam likhein" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email"> Email:</label>
+            <input type="email" id="email" placeholder="Apna email dalein" required>
+        </div>
+        
+        <button type="submit" class="submit-btn"> send Message </button>
+    </form>
+</div>
     <button class="my-btn">Click hear !</button>
     <script>
     const button = document.querySelector('.my-btn');
