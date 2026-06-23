@@ -6,22 +6,22 @@
     <title>Saket</title>
     <style>
     body {
-        background-color:#db97ae;
+        background-color:#7edddd;
         font-family: Arial, sans-serif;
         padding: 20px;
     }
     h1 {
-        color: rgb(0, 3, 3);
+        color: rgb(249, 252, 252);
         text-align: center;
     }
     p {
-        color:#8297c5
+        color:#bfd16d
         font-size: 45px;
         line-height: 1.10;
     }
 .my-btn {
-    background-color: #439938; 
-    color: rgb(255, 255, 255); 
+    background-color: #89cce0; 
+    color: rgb(14, 15, 15); 
     padding: 12px 24px; 
     font-size: 16px; 
     border: none; 
@@ -31,24 +31,22 @@
     margin: 20px auto;
     transition: 0.3s;
 }
-
 .my-btn:hover {
-    background-color: #0056b3;
+    background-color: #116b8f;
     transform: scale(1.05); 
 }
-/* Form Container Styling */
 .form-container {
     background-color: white;
     max-width: 400px;
     margin: 30px auto;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(226, 74, 74, 0.685);
 }
 
 .form-container h2 {
     text-align: center;
-    color: #333;
+    color: #be3f85;
     font-size: 20px;
     margin-bottom: 20px;
 }
@@ -61,7 +59,7 @@
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #555;
+    color: #e2d8d8;
 }
 
 .form-group input {
@@ -74,7 +72,7 @@
 
 .submit-btn {
     width: 100%;
-    background-color: #28a745;
+    background-color: #1e2b21;
     color: white;
     padding: 10px;
     border: none;
@@ -85,7 +83,7 @@
 }
 
 .submit-btn:hover {
-    background-color: #d4d245;
+    background-color: #7c7c16;
 }
 </style>
 </head>
@@ -97,18 +95,24 @@
     <img src="https://picsum.photos/300/200" alt="Ek  photo"
     <div class="form-container">
     <h2>(Contact Us)</h2>
-    <form>
+    <div class="form-container">
+    <h2>Humse Sampark Karein</h2>
+    
+    <form action="https://api.web3forms.com/submit" method="POST">
+        
+        <input type="hidden" name="access_key" value="6f7700bf-b7f7-463d-a415-0d4730ed6e7b">
+
         <div class="form-group">
-            <label for="name"> Naam:</label>
-            <input type="text" id="name" placeholder="Apna naam likhein" required>
+            <label for="name">Aapka Naam:</label>
+            <input type="text" name="User_Name" id="name" placeholder="Apna naam likhein" required>
         </div>
         
         <div class="form-group">
-            <label for="email"> Email:</label>
-            <input type="email" id="email" placeholder="Apna email dalein" required>
+            <label for="email">Aapka Email:</label>
+            <input type="email" name="User_Email" id="email" placeholder="Apna email dalein" required>
         </div>
         
-        <button type="submit" class="submit-btn"> send Message </button>
+        <button type="submit" class="submit-btn">Message Bhejein</button>
     </form>
 </div>
     <button class="my-btn">Click hear !</button>
