@@ -3,124 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saket</title>
+    <title>Saket Chaudhary - Premium Site</title>
     <style>
+    /* 1. ANIMATED LIVE BACKGROUND */
     body {
-        background-color:#7edddd;
-        font-family: Arial, sans-serif;
+        background: linear-gradient(-45deg, #1e3c72, #2a5298, #11998e, #38ef7d);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        font-family: 'Segoe UI', Arial, sans-serif;
         padding: 20px;
+        margin: 0;
+        min-height: 100vh;
+        color: white;
     }
+
+    @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
     h1 {
-        color: rgb(249, 252, 252);
+        color: #ffffff;
         text-align: center;
+        font-size: 36px;
+        text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+        margin-top: 40px;
     }
-    p {
-        color:#bfd16d
-        font-size: 45px;
-        line-height: 1.10;
+
+    .subtitle-text {
+        text-align: center;
+        color: #e0e0e0;
+        font-size: 28px;
+        margin-bottom: 20px;
     }
-.my-btn {
-    background-color: #89cce0; 
-    color: rgb(14, 15, 15); 
-    padding: 12px 24px; 
-    font-size: 16px; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    display: block; 
-    margin: 20px auto;
-    transition: 0.3s;
-}
-.my-btn:hover {
-    background-color: #116b8f;
-    transform: scale(1.05); 
-}
-.form-container {
-    background-color: white;
-    max-width: 400px;
-    margin: 30px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(226, 74, 74, 0.685);
-}
 
-.form-container h2 {
-    text-align: center;
-    color: #be3f85;
-    font-size: 20px;
-    margin-bottom: 20px;
-}
+    .insta-link {
+        display: block;
+        text-align: center;
+        color: #ffdd57;
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 15px auto;
+        transition: 0.3s;
+    }
+    .insta-link:hover {
+        color: #ffffff;
+        text-shadow: 0 0 10px #ffdd57;
+    }
 
-.form-group {
-    margin-bottom: 15px;
-}
+    .site-img {
+        display: block;
+        margin: 20px auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #e2d8d8;
-}
+    .my-btn {
+        background-color: #ffdd57; 
+        color: #111; 
+        padding: 14px 30px; 
+        font-size: 16px; 
+        font-weight: bold;
+        border: none; 
+        border-radius: 30px; 
+        cursor: pointer; 
+        display: block; 
+        margin: 30px auto;
+        box-shadow: 0 4px 15px rgba(255, 221, 87, 0.4);
+        transition: 0.3s;
+    }
+    .my-btn:hover {
+        background-color: #ffffff;
+        transform: scale(1.05); 
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.6);
+    }
 
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
+    /* 2. PREMIUM GLASSMORPHISM CONTAINERS */
+    .glass-box {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        max-width: 420px;
+        margin: 40px auto;
+        padding: 30px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    }
 
-.submit-btn {
-    width: 100%;
-    background-color: #1e2b21;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+    .login-wrapper {
+        margin: 120px auto;
+    }
 
-.submit-btn:hover {
-    background-color: #7c7c16;
-}
-</style>
+    .glass-box h2 {
+        text-align: center;
+        color: #ffffff;
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 25px;
+        text-shadow: 1px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 14px;
+    }
+
+    .form-group input, .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: white;
+        font-size: 15px;
+        font-family: inherit;
+        transition: 0.3s;
+    }
+
+    .form-group input::placeholder, .form-group textarea::placeholder {
+        color: #e0e0e0;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+        background: rgba(255, 255, 255, 0.3);
+        border-color: #ffffff;
+        outline: none;
+        box-shadow: 0 0 8px rgba(255,255,255,0.2);
+    }
+
+    /* BUTTONS */
+    .action-btn {
+        width: 100%;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .submit-btn {
+        background: linear-gradient(135deg, #11998e, #38ef7d);
+    }
+    .submit-btn:hover {
+        background: linear-gradient(135deg, #38ef7d, #11998e);
+        transform: translateY(-2px);
+    }
+
+    .login-btn {
+        background: linear-gradient(135deg, #007bff, #00c6ff);
+    }
+    .login-btn:hover {
+        background: linear-gradient(135deg, #00c6ff, #007bff);
+        transform: translateY(-2px);
+    }
+
+    /* Content Hide/Show Logic */
+    #mainContent {
+        display: none;
+    }
+    </style>
 </head>
 <body>
-    <h1>Hello World! My Name is Saket Chaudhary </h1>
-    <p>Wllcome to My Webpage </p>
-    <a href="https://www.instagram.com/" target="_blank">Instagram ID Saket chaudhary </a>
 
-    <img src="https://picsum.photos/300/200" alt="Ek  photo"
-    <div class="form-container">
-    <h2>(Contact Us)</h2>
-    <div class="form-container">
-    <h2>Humse Sampark Karein</h2>
-    
-    <form action="https://api.web3forms.com/submit" method="POST">
-        
-        <input type="hidden" name="access_key" value="6f7700bf-b7f7-463d-a415-0d4730ed6e7b">
+    <div id="loginPage">
+        <div class="glass-box login-wrapper">
+            <h2>🔒 Admin Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">User ID / Username:</label>
+                    <input type="text" id="username" placeholder="Username dalein" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Password dalein" required>
+                </div>
+                
+                <button type="submit" class="action-btn login-btn">Login Karein</button>
+            </form>
+            <p id="loginMessage" style="text-align: center; font-weight: bold; margin-top: 15px;"></p>
+        </div>
+    </div>
 
-        <div class="form-group">
-            <label for="name">Aapka Naam:</label>
-            <input type="text" name="User_Name" id="name" placeholder="Apna naam likhein" required>
-        </div>
+
+    <div id="mainContent">
+        <h1>Hello World! My Name is Saket Chaudhary</h1>
+        <p class="subtitle-text">Welcome to My Webpage</p>
         
-        <div class="form-group">
-            <label for="email">Aapka Email:</label>
-            <input type="email" name="User_Email" id="email" placeholder="Apna email dalein" required>
+        <a class="insta-link" href="https://www.instagram.com/" target="_blank">📸 Instagram: Saket Chaudhary</a>
+
+        <img class="site-img" src="https://picsum.photos/300/200" alt="Ek photo">
+
+        <div class="glass-box">
+            <h2>Humse Sampark Karein</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="6f7700bf-b7f7-463d-a415-0d4730ed6e7b">
+
+                <div class="form-group">
+                    <label for="name">Full Name (Pura Naam):</label>
+                    <input type="text" name="User_Full_Name" id="name" placeholder="Apna pura naam likhein" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile No:</label>
+                    <input type="tel" name="User_Mobile" id="mobile" placeholder="Apna mobile number dalein" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email ID:</label>
+                    <input type="email" name="User_Email" id="email" placeholder="Apna email dalein" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="village">Village Name (Gaon Ka Naam):</label>
+                    <input type="text" name="User_Village" id="village" placeholder="Apne gaon ka naam dalein" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description (Sujav):</label>
+                    <textarea name="User_Description" id="description" rows="4" placeholder="Apna sujav ya sandesh yahan likhein" required></textarea>
+                </div>
+                
+                <button type="submit" class="action-btn submit-btn">Message Bhejein</button>
+            </form>
         </div>
-        
-        <button type="submit" class="submit-btn">Message Bhejein</button>
-    </form>
-</div>
-    <button class="my-btn">Click hear !</button>
+
+        <button class="my-btn">Click here !</button>
+    </div>
+
+
     <script>
-    const button = document.querySelector('.my-btn');
-    button.addEventListener('click', function() {
-        alert('Waah! click hear wellcome🎉');
+    const loginForm = document.getElementById('loginForm');
+    const loginMessage = document.getElementById('loginMessage');
+    const loginPage = document.getElementById('loginPage');
+    const mainContent = document.getElementById('mainContent');
+    const welcomeBtn = document.querySelector('.my-btn');
+
+    // Welcome Button Alert
+    welcomeBtn.addEventListener('click', function() {
+        alert('Waah! click here welcome🎉');
     });
-</script>
+
+    // Login Logic
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const enteredUser = document.getElementById('username').value;
+        const enteredPass = document.getElementById('password').value;
+
+        // Aapki ID aur Password
+        if (enteredUser === 'admin123' && enteredPass === 'saket@2026') {
+            loginMessage.style.color = '#38ef7d'; 
+            loginMessage.textContent = '🎉 Access Granted! Loading page...';
+            
+            setTimeout(function() {
+                loginPage.style.display = 'none';    
+                mainContent.style.display = 'block';  
+            }, 1000);
+
+        } else {
+            loginMessage.style.color = '#ff4d4d'; 
+            loginMessage.textContent = '❌ Galat User ID ya Password! Dobara koshish karein.';
+        }
+    });
+    </script>
 </body>
 </html>
